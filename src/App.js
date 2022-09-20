@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [count, setCount] = useState(0);
+  let army = "김민규 내년에 군대 가라 ";
+
+  function click(){
+    setCount((count)=>count + 1);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React study</h1>
+      <div>{count}</div>
+      <div>
+        <button onClick={click}>김민규</button>
+      </div>
+      <p></p>
+      {army}{army}{army}{army}
+      <p></p>
+      {army}{army}{army}{army}
+      <p></p>
+      {army}{army}{army}{army}
     </div>
   );
 }
